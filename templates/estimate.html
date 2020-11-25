@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title%} Estimate {% endblock %}
+
+{% block body%} 
+<h3>Create an estimate</h3>
+
+<form method="POST" action="/estimate" id="estimate">
+
+    <label for="Radius">Tank Radius:</label><br>
+    <input type="text" id="radius" name="radius" required><br>  
+<br>
+    <label for="height">Tank Height:</label><br>
+    <input type="text" id="height" name="height" required><br>
+<br>
+    <input type="submit" value="Calculate" >
+</form>
+
+<br><br>
+{% if estimate %}
+    <p>Your total price is </p>
+
+{{ estimate }}
+{% endif %}
+
+{% endblock %}
+
