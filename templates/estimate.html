@@ -4,7 +4,7 @@
 {% block title%} Estimate {% endblock %}
 
 {% block body%} 
-<h3>Create an estimate</h3>
+<h4>Create an estimate</h4>
 
 <form method="POST" action="/estimate" id="estimate">
 
@@ -14,12 +14,12 @@
     <label for="height">Tank Height:</label><br>
     <input type="text" id="height" name="height" required><br>
 <br>
-    <input type="submit" value="Calculate" >
+    <button type="button" class="btn btn-outline-primary">Calculate</button>
 </form>
 
 <br><br>
 {% if estimate %}
-    <p>Your total price is </p>
+    <p class="font-weight-lighter">Your total price is </p>
 
 {{ estimate }}
 {% endif %}
